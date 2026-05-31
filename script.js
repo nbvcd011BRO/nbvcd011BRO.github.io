@@ -1,20 +1,23 @@
-// Floating tech names in hero background
+// Floating tech names in hero background with slow drift animation
 const techNames = [
   'Python', 'SQL Server', 'T-SQL', 'PostgreSQL', 'Azure', 'Docker',
   'FastAPI', 'OpenAI', 'LangChain', 'Pandas', 'Redis', 'dbt',
   'Airflow', 'Snowflake', 'BigQuery', 'AWS S3', 'Kubernetes',
   'Node.js', 'React', 'Embeddings', 'Vector DB', 'ETL', 'Spark',
-  'BERT', 'HuggingFace', 'Prometheus', 'Grafana', 'Elasticsearch'
+  'BERT', 'HuggingFace', 'Prometheus', 'Grafana', 'Elasticsearch',
+  'Azure Data Factory', 'Synapse', 'Fabric', 'Kafka', 'Terraform'
 ];
 
 const bg = document.getElementById('floating-bg');
 if (bg) {
-  techNames.forEach(name => {
+  techNames.forEach((name, i) => {
     const el = document.createElement('span');
     el.textContent = name;
     el.style.left = Math.random() * 95 + '%';
     el.style.top = Math.random() * 95 + '%';
-    el.style.animationDelay = Math.random() * 5 + 's';
+    // Each name gets a unique slow drift animation
+    el.style.animation = `drift${(i % 4) + 1} ${20 + Math.random() * 20}s ease-in-out infinite`;
+    el.style.animationDelay = -(Math.random() * 20) + 's';
     bg.appendChild(el);
   });
 }
@@ -22,7 +25,8 @@ if (bg) {
 // Scroll progress bar
 window.addEventListener('scroll', () => {
   const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-  document.querySelector('.scroll-progress').style.width = scrolled + '%';
+  const bar = document.querySelector('.scroll-progress');
+  if (bar) bar.style.width = scrolled + '%';
 });
 
 // Active scroll dot
@@ -40,7 +44,7 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// Click dot to scroll
+// Click dot to scroll to section
 dots.forEach(d => {
   d.addEventListener('click', () => {
     const target = document.getElementById(d.dataset.section);
@@ -55,4 +59,16 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     const target = document.querySelector(link.getAttribute('href'));
     if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
+});
+
+// Fade-in on scroll for sections
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section').forEach(s => {
+  s.classList.add('fade-in');
+  observer.observe(s);
 });
