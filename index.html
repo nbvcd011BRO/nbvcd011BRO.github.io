@@ -3,16 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Data & AI Engineer</title>
-  <meta name="description" content="Data & AI Engineer building database systems, pipelines, and LLM-powered applications.">
+  <title>Tiyo Gash | Data & AI Engineer</title>
+  <meta name="description" content="Data & AI Engineer. Database engineering, pipelines, LLM-powered apps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <div class="scroll-progress"></div>
+
   <nav>
-    <div class="logo">YN</div>
-    <ul>
+    <div class="logo">TG</div>
+    <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -20,92 +26,159 @@
     </ul>
   </nav>
 
-  <header class="hero">
-    <p class="tagline">Database Engineering · Data Pipelines · AI Integration · Full Stack</p>
-    <h1>Your Name</h1>
-    <p class="location">Houston, TX</p>
-    <p class="status">Open to roles ✓</p>
-    <div class="cta">
-      <a href="#projects" class="btn">View My Work</a>
-      <a href="https://github.com/yourusername" class="btn">GitHub</a>
-      <a href="Resume.pdf" class="btn">Download Resume</a>
+  <div class="scroll-dots">
+    <span class="dot active" data-section="hero"></span>
+    <span class="dot" data-section="about"></span>
+    <span class="dot" data-section="education"></span>
+    <span class="dot" data-section="skills"></span>
+    <span class="dot" data-section="experience"></span>
+    <span class="dot" data-section="projects"></span>
+    <span class="dot" data-section="contact"></span>
+  </div>
+
+  <header class="hero" id="hero">
+    <div class="floating-bg" id="floating-bg"></div>
+    <div class="hero-content">
+      <p class="tagline">DATA ENGINEER · DATABASE ENGINEERING · AI INTEGRATION</p>
+      <h1>Tiyo <span class="accent">Gash</span></h1>
+      <p class="typed-line">&gt; engineer</p>
+      <div class="badges">
+        <span class="badge">Houston, TX</span>
+        <span class="badge">SQL Server DBA · Azure</span>
+        <span class="badge">Open to roles ✓</span>
+      </div>
+      <div class="cta">
+        <a href="#projects" class="btn btn-primary">VIEW MY WORK</a>
+        <a href="https://github.com/nbvcd011BRO" class="btn">GITHUB</a>
+        <a href="Resume.pdf" class="btn">DOWNLOAD RESUME</a>
+      </div>
     </div>
   </header>
 
   <section id="about">
-    <span class="section-num">01 / About</span>
-    <img src="images/profile.png" alt="Your Name" class="profile-pic">
-    <h2>Data & AI Engineer with full-stack depth.</h2>
-    <p>I build the systems that turn raw data into intelligent products. From database design and ETL pipelines, to LLM-powered features, to the full-stack apps that put that intelligence in front of users.</p>
-    <p>I care about systems that are reliable, observable, and built to last.</p>
+    <span class="section-num">01 / ABOUT</span>
+    <h2>Data &amp; AI Engineer with <span class="accent">database depth</span>.</h2>
+    <p class="lead">I build the systems that turn raw data into intelligent products. From database design and ETL pipelines, to LLM-powered features, to the full-stack apps that put that intelligence in front of users.</p>
+    <p class="lead">I care about systems that are reliable, observable, and built to last. Not just code that runs, but infrastructure that holds under pressure.</p>
     <div class="stats">
-      <div><strong>3+</strong> Years SQL & Database Engineering</div>
-      <div><strong>X+</strong> Production Projects</div>
-      <div><strong>3 Domains:</strong> Data · AI · Full Stack</div>
+      <div><strong>3+</strong><span>Years SQL &amp; Databases</span></div>
+      <div><strong>10+</strong><span>Production Projects</span></div>
+      <div><strong>3</strong><span>Domains: Data · AI · Full Stack</span></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <span class="section-num">02 / EDUCATION</span>
+    <h2>Academic <span class="accent">Background</span></h2>
+    <div class="card">
+      <p class="card-date">In Progress</p>
+      <h3>Doctor of Dental Surgery</h3>
+      <p class="card-meta">University Name · City</p>
+      <p>Clinical Sciences · Patient Care · Research Methods</p>
     </div>
   </section>
 
   <section id="skills">
-    <span class="section-num">02 / Skills</span>
-    <h2>Technical Stack</h2>
-    <div class="skill-group">
-      <h3>Database Engineering</h3>
-      <p>SQL Server · T-SQL · PostgreSQL · Indexing · Query Optimization · Stored Procedures · Automation</p>
-    </div>
-    <div class="skill-group">
-      <h3>Data Engineering</h3>
-      <p>Python · Azure Data Factory · ETL/ELT · Pandas · Airflow · Docker</p>
-    </div>
-    <div class="skill-group">
-      <h3>AI & ML</h3>
-      <p>OpenAI API · LangChain · Embeddings · Vector Search · Prompt Engineering</p>
-    </div>
-    <div class="skill-group">
-      <h3>Full Stack</h3>
-      <p>Python · FastAPI · JavaScript · HTML/CSS · REST APIs · Docker</p>
+    <span class="section-num">03 / SKILLS</span>
+    <h2>Technical <span class="accent">Arsenal</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <span class="skill-tag de">DATA ENGINEERING</span>
+        <h3>Database Engineering</h3>
+        <div class="chips">
+          <span>SQL Server</span><span>T-SQL</span><span>PostgreSQL</span>
+          <span>Indexing</span><span>Query Optimization</span><span>Stored Procedures</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <span class="skill-tag de">DATA ENGINEERING</span>
+        <h3>Pipelines &amp; ETL</h3>
+        <div class="chips">
+          <span>Python</span><span>Azure Data Factory</span><span>ETL/ELT</span>
+          <span>Pandas</span><span>Airflow</span><span>Docker</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <span class="skill-tag ml">AI &amp; ML</span>
+        <h3>LLM &amp; AI Integration</h3>
+        <div class="chips">
+          <span>OpenAI API</span><span>LangChain</span><span>Embeddings</span>
+          <span>Vector Search</span><span>Prompt Engineering</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <span class="skill-tag fs">FULL STACK</span>
+        <h3>Backend &amp; APIs</h3>
+        <div class="chips">
+          <span>Python</span><span>FastAPI</span><span>Node.js</span>
+          <span>REST</span><span>JWT Auth</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <span class="skill-tag fs">FULL STACK</span>
+        <h3>Frontend &amp; UI</h3>
+        <div class="chips">
+          <span>JavaScript</span><span>HTML</span><span>CSS</span><span>React</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <span class="skill-tag fs">FULL STACK</span>
+        <h3>DevOps</h3>
+        <div class="chips">
+          <span>Docker</span><span>Git</span><span>CI/CD</span><span>Bash</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="experience">
-    <span class="section-num">03 / Experience</span>
-    <h2>Work History</h2>
-    <div class="job">
-      <h3>SQL Server DBA</h3>
-      <p class="job-meta">Company Name · Dates</p>
-      <p>One paragraph: what you built, what scale, what impact. Numbers if you have them.</p>
+    <span class="section-num">04 / EXPERIENCE</span>
+    <h2>Work <span class="accent">History</span></h2>
+    <div class="card">
+      <h3>SQL Server Database Administrator</h3>
+      <p class="card-meta">Company Name · Dates</p>
+      <p>Managed and tuned SQL Server instances supporting production workloads. Wrote T-SQL stored procedures and automation scripts for backup, monitoring, and index maintenance. Designed schemas and optimized queries for performance.</p>
     </div>
   </section>
 
   <section id="projects">
-    <span class="section-num">04 / Projects</span>
-    <h2>Projects</h2>
-    <div class="project">
-      <span class="project-status">Live</span>
-      <h3>Project Name</h3>
-      <p class="subtitle">One-line description of what it does</p>
-      <p>2 to 3 sentences on what you built, the scale, the stack, what's interesting about it.</p>
-      <p class="tech">Python · FastAPI · PostgreSQL · Docker · OpenAI API</p>
-      <div class="links">
-        <a href="#">GitHub</a>
-        <a href="#">Live Demo</a>
+    <span class="section-num">05 / PROJECTS</span>
+    <h2>Personal <span class="accent">Projects</span></h2>
+    <div class="card project">
+      <div class="project-header">
+        <span class="card-date">Coming Soon</span>
+        <span class="badge badge-live">IN PROGRESS</span>
       </div>
-      <img src="images/project1.svg" alt="Architecture diagram">
+      <h3>Project Name</h3>
+      <p class="card-meta">One-line description of what it does</p>
+      <p>This is where the project description goes. Two to three sentences on what you built, the scale, the stack, what's interesting about it.</p>
+      <div class="chips">
+        <span>Python</span><span>FastAPI</span><span>PostgreSQL</span>
+        <span>Docker</span><span>OpenAI API</span>
+      </div>
+      <div class="links">
+        <a href="#" class="btn-sm">GitHub</a>
+        <a href="#" class="btn-sm">Live Demo</a>
+      </div>
     </div>
   </section>
 
   <section id="contact">
-    <span class="section-num">05 / Contact</span>
-    <h2>Let's Connect</h2>
-    <p>Open to full-time and contract roles in Data Engineering, Database Engineering, and AI Infrastructure.</p>
-    <div class="contact-links">
-      <a href="mailto:your.email@gmail.com">✉ your.email@gmail.com</a>
-      <a href="https://github.com/yourusername">GitHub</a>
-      <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+    <span class="section-num">06 / CONTACT</span>
+    <h2>Let's <span class="accent">Connect</span></h2>
+    <p class="lead center">Open to roles in Data Engineering, Database Engineering, and AI Infrastructure.</p>
+    <div class="cta center">
+      <a href="Resume.pdf" class="btn btn-primary">DOWNLOAD RESUME</a>
+    </div>
+    <div class="contact-grid">
+      <a href="mailto:nbvcd011@gmail.com" class="contact-card">✉ nbvcd011@gmail.com</a>
+      <a href="https://github.com/nbvcd011BRO" class="contact-card">github.com/nbvcd011BRO</a>
+      <a href="#" class="contact-card">in LinkedIn</a>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Your Name</p>
+    <p>© 2026 Tiyo Gash</p>
   </footer>
 
   <script src="script.js"></script>
